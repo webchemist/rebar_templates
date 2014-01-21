@@ -1,0 +1,33 @@
+%% -*- erlang -*-
+
+%%
+%% Full project template
+%%
+
+%% -*- erlang -*-
+
+%% Variables
+
+{variables, [
+	{name, "myproject"}, 
+	{copyright_year, "2014"},
+	{author_name, "Author Name"},
+	{author_email,"author@email.com"},
+	{description, "Fill in description of the project here."}
+]}.
+
+
+%% Directories
+{dir, "deps"}.
+{dir, "src"}.
+{dir, "ebin"}.
+{dir, "include"}.
+{dir, "test"}.
+{dir, "priv"}.
+
+%% Build files
+{template, "full_skel/_Makefile", "Makefile"}.
+{template, "base/common.mk", "common.mk"}.
+{file, "full_skel/rebar_config", "rebar.config"}.
+{file, "full_skel/dev_config", "dev.config"}.
+{file, "base/_gitignore", ".gitignore"}.

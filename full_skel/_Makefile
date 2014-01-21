@@ -1,0 +1,16 @@
+include common.mk
+
+
+.PHONY: run test init_plt update_plt
+
+run: compile
+	@erl -pa ebin -pa deps/*/ebin -config dev.config -s lager -s sync
+
+test: compile
+	@rebar eunit skip_deps=true 
+
+init_plt:
+	@dialyzer --build_plt --output_plt ~/.dialyzer_prj.plt --apps inets sasl stdlib eunit common_test appmon erts mnesia os_mon tools xmerl
+
+update_plt:
+	@dialyzer --add_to_plt --plt ~/.dialyzer_prj.plt -r /ebin -r `find deps/ -iname ebin`
