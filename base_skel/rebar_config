@@ -1,21 +1,7 @@
-{erl_opts, [debug_info, fail_on_warning,
-            {parse_transform, lager_transform},
-            {i, "./deps/lager/include"},
-            {i, "deps"}
-           ]}.
+{erl_opts, [debug_info, fail_on_warning]}.
 
+{lib_dirs, ["deps"]}.
 
-{lib_dirs, [
-            "deps"
-           ]}.
+{sub_dirs, ["rel"]}.
 
-{sub_dirs, [
-            "rel"
-           ]}.
-
-%{eunit_compile_opts, [{src_dirs, ["test"]}]}.
-
-{deps, [
-        {'lager', ".*", {git, "https://github.com/basho/lager.git", "master"}},
-        {'sync', ".*", {git, "https://github.com/rustyio/sync.git", "master"}}
-       ]}.
+{deps, []}.

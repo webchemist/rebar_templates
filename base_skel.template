@@ -1,24 +1,17 @@
 %% -*- erlang -*-
 
-%%
-%% project template
-%%
-%% Sets up boilerplate for a distributed erlang application that
-%% supports hot upgrades.
-%%
-%% Example:
-%%
-%%   rebar create template=project ...
+%% Variables
 
-% Variables
 {variables, [
-  {name, "myproject"}, 
-  {copyright_year, "2013"},
-  {author_name, "Dmitry Kosov"},
-  {description, "Fill in description of project here."}
+	{name, "myproject"}, 
+	{copyright_year, "2014"},
+	{author_name, "Author Name"},
+	{author_email,"author@email.com"},
+	{description, "Fill in description of the project here."}
 ]}.
 
-% Directories
+
+%% Directories
 {dir, "deps"}.
 {dir, "src"}.
 {dir, "ebin"}.
@@ -26,9 +19,9 @@
 {dir, "test"}.
 {dir, "priv"}.
 
-% Build files
+%% Build files
+{template, "base_skel/_Makefile", "Makefile"}.
+{template, "base/common.mk", "common.mk"}.
 {file, "base_skel/rebar_config", "rebar.config"}.
 {file, "base_skel/dev_config", "dev.config"}.
-{file, "base_skel/Makefile", "Makefile"}.
-{file, "base_skel/_gitignore", ".gitignore"}.
-
+{file, "base/_gitignore", ".gitignore"}.
