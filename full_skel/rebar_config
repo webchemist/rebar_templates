@@ -4,18 +4,20 @@
             {i, "deps"}
            ]}.
 
-
-{lib_dirs, [
-            "deps"
-           ]}.
-
-{sub_dirs, [
-            "rel"
-           ]}.
-
-%{eunit_compile_opts, [{src_dirs, ["test"]}]}.
+{lib_dirs, ["deps"]}.
 
 {deps, [
-        {'lager', ".*", {git, "https://github.com/basho/lager.git", "master"}},
-        {'sync', ".*", {git, "https://github.com/rustyio/sync.git", "master"}}
+        {lager, "2.0.1",
+            {git, "git://github.com/basho/lager.git",
+                {tag, "2.0.1"}}},
+        {'sync', ".*", 
+            {git, "https://github.com/rustyio/sync.git", 
+                "master"}}
        ]}.
+
+
+{sub_dirs, ["rel"]}.
+
+%{eunit_compile_opts, [export_all]}.
+%{eunit_opts, [verbose, {report,{eunit_surefire,[{dir,"."}]}}]}.
+
