@@ -4,9 +4,7 @@
         {registered, []},
         {applications, [
                 kernel,
-                stdlib,
-                oserl,
-                iconverl
+                stdlib
         ]},
         {mod, { {{ app_id }}, []} },
         {env, []}
