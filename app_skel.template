@@ -24,8 +24,8 @@
 {dir, "apps/{{ appid }}/test"}.
 
 %% Build files
-{file, "basic_app/appid.app.src", "apps/{{ appid }}/{{ appid }}.app.src"}.
-{file, "basic_app/appid.erl", "apps/{{ appid }}/{{ appid }}.erl"}.
-{file, "basic_app/appid_app.erl", "apps/{{ appid }}/{{ appid }}_app.erl"}.
-{file, "basic_app/appid_sup.erl", "apps/{{ appid }}/{{ appid }}_sup.erl"}.
-{file, "basic_app/appid.hrl", "apps/{{ appid }}/include/{{ appid }}.hrl"}.
+{template, "basic_app/appid.app.src", "apps/{{ appid }}/{{ appid }}.app.src"}.
+{template, "basic_app/appid.erl", "apps/{{ appid }}/{{ appid }}.erl"}.
+{template, "basic_app/appid_app.erl", "apps/{{ appid }}/{{ appid }}_app.erl"}.
+{template, "basic_app/appid_sup.erl", "apps/{{ appid }}/{{ appid }}_sup.erl"}.
+{template, "basic_app/appid.hrl", "apps/{{ appid }}/include/{{ appid }}.hrl"}.
