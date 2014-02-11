@@ -1,0 +1,13 @@
+{application, {{ appid }}, [
+        {description, "{{ appid }}"},
+        {vsn, "0.0.1"},
+        {registered, []},
+        {applications, [
+                kernel,
+                stdlib,
+                oserl,
+                iconverl
+        ]},
+        {mod, { {{ app_id }}, []} },
+        {env, []}
+]}.

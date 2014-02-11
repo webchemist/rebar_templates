@@ -7,16 +7,16 @@ Rebar templates collection
 base_skel
 ---------
 
-Basic erlang application template
+Basic erlang project template
 
 
 full_skel
 ---------
 
-Standalone erlang application template with lager and sync included
+Erlang project template with lager and sync included
 
 
-apps_skel
+app_skel
 ---------
 
-Erlang project with apps support, lager and sync included
+Erlang application template (assuming to be placed into an apps folder)
