@@ -1,4 +1,5 @@
 .PHONY: all compile test clean
+NAME = {{ name }}
 
 REBAR_BIN = $(abspath ./)/rel/../rebar
 ifeq ($(wildcard $(REBAR_BIN)),)
@@ -22,7 +23,6 @@ deps/.updated:
 
 get-deps:
 	@$(REBAR) get-deps
-NAME = {{ name }}
 
 clean: pre-clean
 	$(REBAR) clean
@@ -34,3 +34,4 @@ clean: pre-clean
 pre-compile:
 post-compile:
 pre-clean:
+post-clean:
