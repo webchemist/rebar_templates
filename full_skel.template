@@ -31,3 +31,4 @@
 {file, "full_skel/rebar_config", "rebar.config"}.
 {file, "full_skel/dev_config", "dev.config"}.
 {file, "base/_gitignore", ".gitignore"}.
+{file, "synccgfgen.py", "synccgfgen.py"}.
