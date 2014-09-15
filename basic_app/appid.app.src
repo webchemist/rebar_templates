@@ -6,6 +6,6 @@
                 kernel,
                 stdlib
         ]},
-        {mod, { {{ appid }}, []} },
+        {mod, { {{ appid_app }}, []} },
         {env, []}
 ]}.
