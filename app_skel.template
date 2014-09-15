@@ -10,6 +10,7 @@
 
 {variables, [
 	{appid, "myapp"}, 
+	{app_dir, "."},
 	{copyright_year, "2014"},
 	{author_name, "Author Name"},
 	{author_email,"author@email.com"},
@@ -18,14 +19,14 @@
 
 
 %% Directories
-{dir, "apps/{{ appid }}/src"}.
-{dir, "apps/{{ appid }}/ebin"}.
-{dir, "apps/{{ appid }}/include"}.
-{dir, "apps/{{ appid }}/test"}.
+{dir, "{{ app_dir }}/src"}.
+{dir, "{{ app_dir }}/ebin"}.
+{dir, "{{ app_dir }}/include"}.
+{dir, "{{ app_dir }}/test"}.
 
 %% Build files
-{template, "basic_app/appid.app.src", "apps/{{ appid }}/{{ appid }}.app.src"}.
-{template, "basic_app/appid.erl", "apps/{{ appid }}/{{ appid }}.erl"}.
-{template, "basic_app/appid_app.erl", "apps/{{ appid }}/{{ appid }}_app.erl"}.
-{template, "basic_app/appid_sup.erl", "apps/{{ appid }}/{{ appid }}_sup.erl"}.
-{template, "basic_app/appid.hrl", "apps/{{ appid }}/include/{{ appid }}.hrl"}.
+{template, "basic_app/appid.app.src", "{{ app_dir }}/src/{{ appid }}.app.src"}.
+{template, "basic_app/appid.erl", "{{ app_dir }}/src/{{ appid }}.erl"}.
+{template, "basic_app/appid_app.erl", "{{ app_dir }}/src/{{ appid }}_app.erl"}.
+{template, "basic_app/appid_sup.erl", "{{ app_dir }}/src/{{ appid }}_sup.erl"}.
+{template, "basic_app/appid.hrl", "{{ app_dir }}/include/{{ appid }}.hrl"}.

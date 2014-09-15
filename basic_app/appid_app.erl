@@ -2,7 +2,6 @@
 
 -behaviour(application).
 
-%% application callbacks
 -export([start/2, stop/1]).
 
 -include("{{ appid }}.hrl").

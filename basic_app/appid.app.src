@@ -1,6 +1,6 @@
 {application, {{ appid }}, [
         {description, "{{ appid }}"},
-        {vsn, "0.0.1"},
+        {vsn, "0.1"},
         {registered, []},
         {applications, [
                 kernel,

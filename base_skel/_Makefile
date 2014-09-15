@@ -1,1 +1,4 @@
 include common.mk
+
+dev: compile
+	erl -pa ebin deps/*/ebin -s $(NAME) -c dev.config
